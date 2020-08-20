@@ -35,6 +35,7 @@ body {
     background: var(--color-background);
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
     color: var(--color-text-base);
 }
 
@@ -42,9 +43,10 @@ input,
 button{
     color: var(--color-text-base);
     font: 500 1.3rem Poppins;
+    padding: 1px;
 }
 
-#app{
+#app {
     width: 90vw;
     max-width: 700px;
 }
@@ -54,10 +56,59 @@ button{
     color: var(--color-text-title);
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.input
+/* li */{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:90vw;
+    flex-direction: row;
+}
+
+.input input {
+    width: 80vw;
+}
+.input button{
+    margin-left: .5rem;
+    width: 10vw;
+}
+
+ul{
+   display: flex;
+   flex-direction: column;
+   width: 90vw;
+   list-style: none;
+}
+
+ul li{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    font: 300 1rem Poppins;
 }
 
 @media (min-width: 700px) {
     :root{
         font-size: 62.5%;
+    }
+    #header {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+    .input,
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:700px;
+    }
+    .input input {
+        width: 600px;
+    }
+    .input button{
+        width: 80px;
     }
 }
