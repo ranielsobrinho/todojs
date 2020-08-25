@@ -56,11 +56,10 @@ button{
     color: var(--color-text-title);
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
-.input
-/* li */{ 
+.input { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,11 +68,24 @@ button{
 }
 
 .input input {
+    border: none;
+    border-radius: .5rem;
+    background: var(--color-box-base);;
     width: 80vw;
+    height:5vh;
 }
+
+.input input:focus {
+    border-bottom: 1px solid var(--color-primary);
+}
+
 .input button{
     margin-left: .5rem;
-    width: 10vw;
+    width: 15vw;
+    background: var(--color-secondary);
+    color: var(--color-box-base);
+    border-radius: 2rem;
+    height:5vh;
 }
 
 ul{
@@ -87,7 +99,27 @@ ul li{
     display: flex;
     justify-content: space-between;
     width: 90vw;
-    font: 300 1rem Poppins;
+    font: 500 1.4rem Poppins;
+}
+
+li {
+    height: 4rem;
+    border-bottom: 1px solid var(--color-primary);
+    margin: 0.2rem 0px;
+    padding: 1rem;
+}
+ /* TODO quando o texto é muito grande, causa uma quebra de linha
+ e o texto não flui dentro da tag */
+li a{
+    text-decoration: none;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.3rem;
+    background: var(--color-primary);
+    color: white;
+    width: 1.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 @media (min-width: 700px) {
@@ -103,12 +135,37 @@ ul li{
         display: flex;
         justify-content: center;
         align-items: center;
-        width:700px;
+        width:90vw;
+
     }
     .input input {
-        width: 600px;
+        width: 80vw;
     }
     .input button{
-        width: 80px;
+        width: 10vw;
+    }
+    
+    ul{
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        list-style: none;
+    }
+
+    ul li{
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+        font: 300 2rem Poppins;
+    }
+
+    li {
+        height: 4rem;
+        border-bottom: 1px solid var(--color-primary);
+        margin-bottom: .5rem;
+    }
+    /* TODO Fazer o link parecer um botão */
+    li a{
+        text-decoration: none;
     }
 }
