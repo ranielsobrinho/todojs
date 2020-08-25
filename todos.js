@@ -4,12 +4,12 @@ var inputElement = document.querySelector('#input');
 var buttonElement = document.querySelector('#btn');
 
 var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
-
+// TODO Quando clico no botao de add o valor é renderizado
+//mesmo nao tendo nada no input, trabalhar nessa parte
 //função de renderização das todos
 function renderTodos() {
     //removendo todo o conteúdo do listElement
     listElement.innerHTML = '';
-
     for (todo of todos) {
         //criando a tag li (element)
         var todoElement = document.createElement('li');
@@ -18,7 +18,7 @@ function renderTodos() {
 
         //fazendo o link de excluisão
         var linkElement = document.createElement('a');
-        var linkText = document.createTextNode('Excluir');
+        var linkText = document.createTextNode('X');
         linkElement.setAttribute('href', '#');
 
         var pos = todos.indexOf(todo);
