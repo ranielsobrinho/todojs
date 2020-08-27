@@ -117,15 +117,21 @@ li a{
     background: var(--color-primary);
     color: white;
     width: 1.5rem;
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1100px) {
     :root{
-        font-size: 62.5%;
+        font-size: 60%;
     }
+
+    #app {
+        width: 90vw;
+        max-width: 1100px;
+    }
+
     #header {
         font-size: 3rem;
         padding: 1rem;
@@ -140,9 +146,11 @@ li a{
     }
     .input input {
         width: 80vw;
+        height: 4rem;
     }
     .input button{
         width: 10vw;
+        height: 4rem;
     }
     
     ul{
@@ -166,6 +174,6 @@ li a{
     }
     /* TODO Fazer o link parecer um botão */
     li a{
-        text-decoration: none;
+        width: 2rem;
     }
 }
