@@ -1,23 +1,11 @@
 :root {
     --color-background: #F0F0F7;
-    --color-primary-lighter: #9871F5;
-    --color-primary-light: #916BEA;
     --color-primary: #8257E5;
-    --color-primary-dark: #774DD6;
-    --color-primary-darker: #6842c2;
     --color-secondary: #04D361;
-    --color-secondary-dark: #04BF58;
-    --color-title-in-primary: #FFFFFF;
-    --color-text-in-primary: #D4C2FF;
     --color-text-title: #32264D;
-    --color-text-complement: #9C98A6;
     --color-text-base: #6A6180;
-    --color-line-in-white: #E6E6F0;
     --color-input-background: #F8F8FC;
     --color-button-text: #FFFFFF;
-    --color-box-base: #FFFFFF;
-    --color-box-footer: #FAFAFC;
-    --color-small-info: #C1BCCC;
     font-size: 60%;
 }
 
@@ -33,10 +21,10 @@ html, body {
 
 body {
     background: var(--color-background);
+    color: var(--color-text-base);
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    color: var(--color-text-base);
 }
 
 input,
@@ -52,27 +40,27 @@ button{
 }
 
 #header{
+    margin: 1rem;
     font: 550 2.1rem Archivo;
     color: var(--color-text-title);
     display: flex;
     justify-content: center;
-    margin: 1rem;
 }
 
 .input { 
+    width:90vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    width:90vw;
     flex-direction: row;
 }
 
 .input input {
-    border: none;
-    border-radius: .5rem;
-    background: var(--color-box-base);;
     width: 80vw;
     height:5vh;
+    background: var(--color-input-background);
+    border: none;
+    border-radius: .5rem;
 }
 
 .input input:focus {
@@ -80,43 +68,43 @@ button{
 }
 
 .input button{
-    margin-left: .5rem;
-    width: 15vw;
-    background: var(--color-secondary);
-    color: var(--color-box-base);
-    border-radius: 2rem;
     height:5vh;
+    width: 15vw;
+    margin-left: .5rem;
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border-radius: 2rem;
 }
 
 ul{
-   display: flex;
-   flex-direction: column;
-   width: 90vw;
-   list-style: none;
+    width: 90vw;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 
 ul li{
-    display: flex;
-    justify-content: space-between;
     width: 90vw;
     font: 500 1.4rem Poppins;
+    display: flex;
+    justify-content: space-between;
 }
 
 li {
     height: 4rem;
-    border-bottom: 1px solid var(--color-primary);
     margin: 0.2rem 0px;
     padding: 1rem;
+    border-bottom: 1px solid var(--color-primary);
 }
  /* TODO quando o texto é muito grande, causa uma quebra de linha
  e o texto não flui dentro da tag */
 li a{
+    width: 1.5rem;
     text-decoration: none;
-    border: 1px solid var(--color-primary);
-    border-radius: 0.3rem;
     background: var(--color-primary);
     color: white;
-    width: 1.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,33 +126,35 @@ li a{
     }
     .input,
     li {
+        width:90vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        width:90vw;
 
     }
     .input input {
         width: 80vw;
         height: 4rem;
+        background: var(--color-input-background);
     }
     .input button{
         width: 10vw;
         height: 4rem;
+        color: var(--color-button-text);
     }
     
     ul{
-        display: flex;
-        flex-direction: column;
         width: 90vw;
         list-style: none;
+        display: flex;
+        flex-direction: column;
     }
 
     ul li{
-        display: flex;
-        justify-content: space-between;
         width: 90vw;
         font: 300 2rem Poppins;
+        display: flex;
+        justify-content: space-between;
     }
 
     li {
