@@ -2,6 +2,7 @@
 var listElement = document.querySelector('#app ul');
 var inputElement = document.querySelector('#input');
 var buttonElement = document.querySelector('#btn');
+var avisoELement = document.querySelector('#aviso');
 
 var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
@@ -59,6 +60,7 @@ buttonElement.addEventListener('click', function(){
         renderTodos();
     }else{
         addTodos();   
+        avisoELement.innerHTML = '';
     }
 });
 
@@ -73,5 +75,9 @@ function saveToStorage() {
 };
 
 function showMessage() {
-    alert("Digite alguma coisa primeiro");
+    var message = document.createElement('h2');
+    var textElement = document.createTextNode('Digite uma tarefa!');
+    message.appendChild(textElement);
+
+    avisoELement.appendChild(message);
 };
