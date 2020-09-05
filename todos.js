@@ -4,8 +4,7 @@ var inputElement = document.querySelector('#input');
 var buttonElement = document.querySelector('#btn');
 
 var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
-// TODO Quando clico no botao de add o valor é renderizado
-//mesmo nao tendo nada no input, trabalhar nessa parte
+
 //função de renderização das todos
 function renderTodos() {
     //removendo todo o conteúdo do listElement
@@ -54,14 +53,25 @@ function addTodos() {
 };
 
 //fazendo com que a função seja executada somente ao click do botão
-buttonElement.onclick = addTodos;
+buttonElement.addEventListener('click', function(){
+    if (inputElement.value == 0){
+        showMessage();
+        renderTodos();
+    }else{
+        addTodos();   
+    }
+});
 
 function deleteTodo(pos) {
     todos.splice(pos, 1);
     renderTodos();
     saveToStorage();
-}
+};
 
 function saveToStorage() {
     localStorage.setItem('list_todos', JSON.stringify(todos));
-}
+};
+
+function showMessage() {
+    alert("Digite alguma coisa primeiro");
+};
