@@ -55,7 +55,7 @@ function addTodos() {
 
 //fazendo com que a função seja executada somente ao click do botão
 buttonElement.addEventListener('click', function(){
-    if (inputElement.value == 0){
+    if (inputElement.value === ''){
         showMessage();
         renderTodos();
     }else{
